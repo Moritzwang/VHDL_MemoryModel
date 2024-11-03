@@ -26,3 +26,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity TestBench is
 
 end TestBench;
+
+architecture TB_TEST of TestBench is
+begin
+
+end TB_TEST;

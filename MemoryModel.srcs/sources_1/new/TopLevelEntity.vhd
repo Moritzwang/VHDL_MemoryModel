@@ -26,3 +26,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity TLE is
 
 end TLE;
+
+architecture TLE_TEST of TLE is
+begin
+
+end TLE_TEST;
