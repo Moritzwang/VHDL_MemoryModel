@@ -23,14 +23,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 
-entity RAM4096x12 is
-    port(
-        w_en    : in bit;
-        addr    : in bit_vector( 11 downto 0 );
-        data_in : in bit_vector( 11 downto 0 );
-        data_out: out bit_vector( 11 downto 0 )
-    );
-end RAM4096x12;
+--entity RAM4096x12 is
+--    port(
+--        w_en    : in bit;
+--        addr    : in bit_vector( 11 downto 0 );
+--        data_in : in bit_vector( 11 downto 0 );
+--        data_out: out bit_vector( 11 downto 0 )
+--    );
+--end RAM4096x12;
 
 architecture RAM4096x12_BitTyped of RAM4096x12 is
 begin

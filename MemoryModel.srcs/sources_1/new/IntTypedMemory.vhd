@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 
 entity RAM4096x12 is
@@ -34,5 +35,21 @@ end RAM4096x12;
 
 architecture RAM4096x12_IntTyped of RAM4096x12 is
 begin
-
+    
+    process(w_en, addr, data_in)
+        type IntMem is array (natural range 0 to (2**12)-1) of bit_vector( 11 downto 0 );
+        variable mem : IntMem;
+        variable index : natural;
+    begin
+        
+        index := to_integer(unsigned(to_stdlogicvector(addr)));
+        
+        if w_en = '1' then
+            mem(index) := data_in;
+        end if;
+        
+        data_out <= mem(index);
+        
+    end process;
+    
 end RAM4096x12_IntTyped;
